@@ -1,7 +1,10 @@
-import './bootstrap';
 
-import Alpine from 'alpinejs';
+//require('./bootstrap');
 
-window.Alpine = Alpine;
+import { createApp } from "vue/dist/vue.esm-bundler";
+import ProductsGrid from './components/ProductsGrid.vue'
 
-Alpine.start();
+const app = createApp({})
+app.component('products-grid', ProductsGrid);
+app.mount('#app')
+
